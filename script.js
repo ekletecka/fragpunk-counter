@@ -25,6 +25,12 @@ const lancerData = {
         counteredBy: ["Axon", "Pathojen", "Hollowpoint"]
       },
       {
+        name: "Dex",
+        role: "Flanker/Support",
+        counters: ["Hollowpoint", "Zephyr", "Broker"],
+        counteredBy: ["Sonar", "Pathojen", "Corona"]
+      },
+      {
         name: "Hollowpoint",
         role: "Damage/Recon",
         counters: ["Zephyr", "Serket", "Kismet"],
