@@ -6,15 +6,28 @@
   <title>FragPunk Counter-Pick Tool</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { padding: 20px; background-color: #f0f0f0; }
-    h1 { color: #ff4500; }
+    body { padding: 20px; }
     .lancer-section, .map-section { margin-bottom: 20px; }
-    #results, #map-results { margin-top: 20px; background-color: white; padding: 10px; border-radius: 5px; }
+    #results, #map-results { margin-top: 20px; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1 class="text-center">FragPunk Counter-Pick Tool</h1>
+    
+    <!-- Enemy Lancer Selection Section -->
+    <div class="lancer-section">
+      <h3>Select Enemy Team Lancers</h3>
+      <div class="row">
+        <div class="col-md-2"><select class="form-select" id="enemy1"><option value="">Select Lancer</option></select></div>
+        <div class="col-md-2"><select class="form-select" id="enemy2"><option value="">Select Lancer</option></select></div>
+        <div class="col-md-2"><select class="form-select" id="enemy3"><option value="">Select Lancer</option></select></div>
+        <div class="col-md-2"><select class="form-select" id="enemy4"><option value="">Select Lancer</option></select></div>
+        <div class="col-md-2"><select class="form-select" id="enemy5"><option value="">Select Lancer</option></select></div>
+      </div>
+    </div>
+    
+    <button class="btn btn-primary" onclick="getCounterPicks()">Get Counter-Picks</button>
     
     <!-- Map Selection Section -->
     <div class="map-section">
@@ -34,20 +47,6 @@
       </div>
       <button class="btn btn-primary mt-2" onclick="getMapRecommendations()">Get Map Recommendations</button>
     </div>
-    
-    <!-- Enemy Lancer Selection Section -->
-    <div class="lancer-section">
-      <h3>Select Enemy Team Lancers</h3>
-      <div class="row">
-        <div class="col-md-2"><select class="form-select" id="enemy1"><option value="">Select Lancer</option></select></div>
-        <div class="col-md-2"><select class="form-select" id="enemy2"><option value="">Select Lancer</option></select></div>
-        <div class="col-md-2"><select class="form-select" id="enemy3"><option value="">Select Lancer</option></select></div>
-        <div class="col-md-2"><select class="form-select" id="enemy4"><option value="">Select Lancer</option></select></div>
-        <div class="col-md-2"><select class="form-select" id="enemy5"><option value="">Select Lancer</option></select></div>
-      </div>
-    </div>
-    
-    <button class="btn btn-primary" onclick="getCounterPicks()">Get Counter-Picks</button>
     
     <!-- Results Sections -->
     <div id="map-results" class="mt-3"></div>
